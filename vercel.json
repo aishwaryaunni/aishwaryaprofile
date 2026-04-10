@@ -3,12 +3,7 @@
   "version": 2,
   "buildCommand": "next build",
   "outputDirectory": ".next",
-  "env": {
-    "NEXT_PUBLIC_SITE_URL": {
-      "description": "Public URL of the site",
-      "default": "https://your-domain.com"
-    }
-  },
+  
   "headers": [
     {
       "source": "/(.*)",
@@ -31,7 +26,7 @@
   "redirects": [
     {
       "source": "/resume",
-      "destination": "/resume.pdf",
+      "destination": "/aishu_resume.pdf",
       "permanent": true
     }
   ]
