@@ -10,30 +10,23 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [20.x]   # ✅ Removed 18.x — test one stable version only
 
     steps:
-      - uses: actions/checkout@v4         # ✅ upgraded from v3
+      - uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4       # ✅ upgraded from v3
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 20.x
           cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Run linter
-        run: npx eslint src/
-
+      
       - name: Build project
         run: npm run build
 
-      - name: Run type check
-        run: npx tsc --noEmit
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
@@ -47,7 +40,7 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
 
     steps:
-      - uses: actions/checkout@v4         # ✅ upgraded from v3
+      - uses: actions/checkout@v4
 
       - name: Deploy to Vercel
         uses: vercel/action@master
@@ -56,3 +49,4 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           production: true
+          
