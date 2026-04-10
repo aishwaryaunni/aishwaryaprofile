@@ -12,13 +12,13 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [20.x]   # ✅ Removed 18.x — test one stable version only
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4         # ✅ upgraded from v3
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4       # ✅ upgraded from v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
@@ -36,7 +36,6 @@ jobs:
         run: npx tsc --noEmit
 
       - name: Upload build artifacts
-        if: matrix.node-version == '20.x'
         uses: actions/upload-artifact@v4
         with:
           name: next-build
@@ -48,7 +47,7 @@ jobs:
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4         # ✅ upgraded from v3
 
       - name: Deploy to Vercel
         uses: vercel/action@master
@@ -57,3 +56,4 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           production: true
+          
