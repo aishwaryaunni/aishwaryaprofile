@@ -6,7 +6,7 @@ import { ExternalLink, Github } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: 'Retrieval-Augmented Fake News Detection',
+    title: 'News Authenticity Verification using Hybrid Language Model(RAG) Pipeline',
     description: 'AI-powered system using semantic search and LLMs to detect misinformation with reasoning summaries.',
     image: '/rag.png',
     technologies: ['NLP', 'LLM (Gemini 2.5)', 'FAISS', 'BART', 'Sentence-Transformers'],
