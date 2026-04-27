@@ -49,8 +49,8 @@ const projects = [
       'Scheduled email reports to development team',
       'Data-driven feedback loops for continuous improvement',
     ],
-    github: 'https://github.com/aishwaryaunni/nlp-support-system',
-    live: '#',
+    github: 'https://github.com/aishwaryaunni/cumta-pulse-nlp-v2',
+    live: 'https://cumta-pulse-nlp-v2.vercel.app/',
   },
   {
     id: 4,
