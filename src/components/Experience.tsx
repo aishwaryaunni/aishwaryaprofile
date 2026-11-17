@@ -8,7 +8,7 @@ const experiences = [
     id: 1,
     company: 'CUMTA, Chennai',
     role: 'Data Science Intern',
-    duration: 'Jan 2026 – Present',
+    duration: 'Jan 2026 – Apr 2026',
     type: 'Current',
     description:
       'Building and deploying AI-powered geospatial analytics solutions for urban mobility and service intelligence.',
