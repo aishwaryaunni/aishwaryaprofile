@@ -55,7 +55,7 @@ export default function Hero() {
             Aishwarya C U
           </span>
           <span className="block text-2xl md:text-4xl font-medium text-slate-700 dark:text-white mt-2">
-            Data Science & Analytics
+            Data Scientist | AI/ML & Generative AI | NLP | RAG | Python | SQL | Machine Learning | LLM Applications
           </span>
         </motion.h1>
 
@@ -64,7 +64,7 @@ export default function Hero() {
           variants={itemVariants}
           className="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto font-light leading-relaxed text-center"
         >
-          Transforming complex data into data-driven decisions using analytics, machine learning, and visualization. Currently contributing at CUMTA, backed by industry experience at Deloitte.
+          Transforming complex data into data-driven decisions using analytics, machine learning, and visualization. Currently contributing at CUMTA, backed by industry experience at Deloitte USI.
         </motion.p>
         
         {/* Stats */}
@@ -100,7 +100,7 @@ export default function Hero() {
             View Projects <ArrowRight size={20} />
           </motion.a>
           <motion.a
-            href="/aishu_resume.pdf"  // Update with your actual resume path
+            href="/Aishwarya_CU_Resume.pdf"  // Update with your actual resume path
             download
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
